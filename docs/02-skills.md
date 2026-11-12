@@ -56,9 +56,24 @@ pip install graphifyy        # o: uv tool install graphifyy
 graphify --help              # el propio programa instala su skill; usa /graphify dentro del agente
 ```
 
-**Seguridad (del paquete ECC)** — `security-bounty-hunter` (buscar vulnerabilidades alcanzables en tu código o con permiso), `mcp-dependency-review` (revisar un MCP antes de aprobarlo), y `manim-video` (animaciones técnicas). El repo `affaan-m/everything-claude-code` trae muchísimas cosas que chocan entre sí: **instala solo estas con `-s`**, y comprueba el nombre del repo y de las skills con `-l` antes.
+**Seguridad, OSINT y animación técnica** — vienen del repo `affaan-m/ECC` ("Everything Claude Code": una colección enorme de skills de un solo autor). Se instalan solo las 4 que sirven, con `-s`, y el resto se ignora:
 
-**Otras que uso y no pude rastrear a un repo** (búscalas por nombre con `npx skills find <nombre>` y revisa la fuente antes de instalar): `youtube-scriptwriting`, `excalidraw-diagram`, `frontend-slides`, `osint-investigation`, `business-case`, `contract-review`, `incident-postmortem`, `sop-builder`, `launch-runbook`.
+```bash
+npx skills add affaan-m/ECC -g -a claude-code -y -s security-bounty-hunter mcp-dependency-review osint-investigation manim-video
+```
+
+`security-bounty-hunter` busca vulnerabilidades alcanzables (en tu código o con permiso), `mcp-dependency-review` revisa un MCP antes de aprobarlo, `osint-investigation` es metodología de investigación con pistas sueltas y `manim-video` hace animaciones técnicas.
+
+**Documentos, negocio y diagramas** — todas verificadas con `-l` en sus repos:
+
+```bash
+npx skills add IPedrax/OmniSkill -g -a claude-code -y -s sop-builder incident-postmortem business-case contract-review
+npx skills add rampstackco/claude-skills -g -a claude-code -y -s launch-runbook
+npx skills add zarazhangrui/frontend-slides -g -a claude-code -y -s frontend-slides
+npx skills add coleam00/excalidraw-diagram-skill -g -a claude-code -y -s excalidraw-diagram
+```
+
+`OmniSkill` es una colección de ~53 skills de oficina; instala solo esas 4. `youtube-scriptwriting` es la única que no pude rastrear a un repo: búscala con `npx skills find youtube script`.
 
 ## Skills propias de este kit
 
