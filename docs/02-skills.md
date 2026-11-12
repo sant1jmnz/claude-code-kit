@@ -73,15 +73,14 @@ npx skills add zarazhangrui/frontend-slides -g -a claude-code -y -s frontend-sli
 npx skills add coleam00/excalidraw-diagram-skill -g -a claude-code -y -s excalidraw-diagram
 ```
 
-`OmniSkill` es una colección de ~53 skills de oficina; instala solo esas 4. `youtube-scriptwriting` es la única que no pude rastrear a un repo: búscala con `npx skills find youtube script`.
-
-## Skills propias de este kit
+`OmniSkill` es una colección de ~53 skills de oficina; instala solo esas 4. ## Skills propias de este kit
 
 Copia las carpetas de [`../skills/`](../skills) a la carpeta global de skills de tu agente:
 
 | Skill | Qué hace |
 |---|---|
 | `handoff` | Resume la conversación en un archivo para continuar en una sesión nueva (ahorra tokens) |
+| `youtube-scriptwriting` | Guiones de YouTube con retención (gancho, estructura, cierre). Incluida tal cual; no pude rastrear su autor original, si es tuya o sabes de quién es, abre un issue |
 | `perfiles` | Activa/desactiva grupos de skills según el trabajo del día, para no pasarte del presupuesto de contexto |
 
 Rutas globales de skills: Claude Code `~/.claude/skills/` · Antigravity `~/.gemini/config/skills/` · Codex: deja que `npx skills add -a codex` resuelva la ruta.
