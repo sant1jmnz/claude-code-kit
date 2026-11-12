@@ -58,6 +58,11 @@ Después copia las dos skills propias de este repo: `skills/handoff` y `skills/p
 
 Lee `docs/03-plugins.md`. Los comandos `/plugin ...` son slash commands de la interfaz: si no puedes ejecutarlos tú, escribe a la persona la lista exacta para que los pegue. Instala el set base; el resto es opcional.
 
+### Fase 4b — Mods (solo Claude Code)
+
+1. `guia-skills` (de este repo) y los mods de ahorro de tokens: lee `docs/08-mods-ahorro-tokens.md` y comprueba la versión de Claude Code (`claude --version`). Si es menor a 2.1.287, dile a la persona que actualice y salta esta sub-fase.
+2. Dale la lista de comandos `/plugin ...` para que los pegue (son comandos de la interfaz). Recuérdale revisar el código de mods de terceros si quiere.
+
 ## Fase 5 — MCPs
 
 Lee `docs/04-mcp.md`. Agrega solo los que no necesiten clave (context7, playwright, chrome-devtools). Firecrawl es opcional y la clave la agrega la persona. Antes de aprobar cualquier MCP nuevo que encuentre en el futuro, aplica la revisión descrita ahí.

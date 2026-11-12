@@ -43,7 +43,22 @@ npx skills add emilkowalski/skill -g -a claude-code -y -s emil-design-eng apple-
 
 **Video con código (HyperFrames)** — `heygen-com/hyperframes`: `hyperframes`, `hyperframes-cli`, `hyperframes-core`, `hyperframes-registry`, `media-use`, `general-video`, `motion-graphics`, `faceless-explainer`, `slideshow`. Video generado desde HTML; necesita Node y FFmpeg.
 
-**Otras que uso y no vienen de un repo que pueda garantizar** (búscalas por nombre con `npx skills find <nombre>` y revisa la fuente antes de instalar): `youtube-scriptwriting`, `manim-video`, `excalidraw-diagram`, `frontend-slides`, `graphify` (grafo de conocimiento de un repo), `security-bounty-hunter`, `mcp-dependency-review`, `osint-investigation`, `business-case`, `contract-review`, `incident-postmortem`, `sop-builder`, `launch-runbook`, y un set de skills para Instagram (`ig-caption-writer`, `ig-carousel-planner`, `ig-hook-extractor`…).
+**Instagram** — `sergebulaev/instagram-skills` (9 skills: `ig-content-planner`, `ig-caption-writer`, `ig-carousel-planner`, `ig-hook-extractor`, `ig-hashtag-strategist`, `ig-humanizer`, `ig-profile-optimizer`, `ig-repurposer`, `ig-audience-insights`). Escriben captions, carruseles, ganchos y el calendario; publicar es opcional (vía Publora, con su clave) y **nunca sin tu OK**.
+
+```bash
+npx skills add sergebulaev/instagram-skills -g -a claude-code -y -s '*'
+```
+
+**Entender un proyecto con un grafo de conocimiento** — `graphify` (paquete de PyPI, no un repo de skills):
+
+```bash
+pip install graphifyy        # o: uv tool install graphifyy
+graphify --help              # el propio programa instala su skill; usa /graphify dentro del agente
+```
+
+**Seguridad (del paquete ECC)** — `security-bounty-hunter` (buscar vulnerabilidades alcanzables en tu código o con permiso), `mcp-dependency-review` (revisar un MCP antes de aprobarlo), y `manim-video` (animaciones técnicas). El repo `affaan-m/everything-claude-code` trae muchísimas cosas que chocan entre sí: **instala solo estas con `-s`**, y comprueba el nombre del repo y de las skills con `-l` antes.
+
+**Otras que uso y no pude rastrear a un repo** (búscalas por nombre con `npx skills find <nombre>` y revisa la fuente antes de instalar): `youtube-scriptwriting`, `excalidraw-diagram`, `frontend-slides`, `osint-investigation`, `business-case`, `contract-review`, `incident-postmortem`, `sop-builder`, `launch-runbook`.
 
 ## Skills propias de este kit
 

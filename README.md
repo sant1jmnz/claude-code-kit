@@ -26,6 +26,8 @@ Nada se instala a escondidas: el agente hace backup de tu configuración, te mue
 | [`docs/03-plugins.md`](docs/03-plugins.md) | Plugins de Claude Code (superpowers, diseño, seguridad, etc.) |
 | [`docs/04-mcp.md`](docs/04-mcp.md) | MCPs útiles: docs al día, navegador, scraping |
 | [`docs/05-ahorrar-tokens.md`](docs/05-ahorrar-tokens.md) | Cómo gastar menos cuota (clave en planes gratis o de prueba) |
+| [`docs/08-mods-ahorro-tokens.md`](docs/08-mods-ahorro-tokens.md) | Mods que recortan tokens solos (input-router, model-router, savings-proof…) |
+| [`plugins/guia-skills`](plugins/guia-skills) | Mod propio: `/guia` y sugerencias de skill mientras escribes |
 | [`docs/06-memoria.md`](docs/06-memoria.md) | Sistema de memoria en archivos para no perder el hilo entre sesiones |
 | [`docs/07-codex-antigravity.md`](docs/07-codex-antigravity.md) | Qué se porta a Codex / Antigravity y cómo |
 | [`templates/`](templates) | `CLAUDE.md` global, fragmento de `settings.json` y plantillas de memoria |

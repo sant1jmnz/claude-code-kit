@@ -38,6 +38,15 @@ Reinicia después de instalar. `/plugin` muestra el estado.
 | `egm` | `egm` (`google/elephant-goldfish-model`) | Redactar un plan por escrito y revisarlo con revisores en paralelo **antes** de programar proyectos grandes |
 | `claude-video-vision` | `claude-video-vision` (`jordanrendric/claude-video-vision`) | Que Claude "vea" videos (frames + audio). Necesita FFmpeg |
 
+## Mods
+
+- **`guia-skills`** (de este repo): `/guia` abre un panel "tarea → skill → cómo pedirla" y, mientras escribes, sugiere la skill adecuada (ES/EN) solo si la tienes instalada.
+  ```
+  /plugin marketplace add sant1jmnz/claude-code-kit
+  /plugin install guia-skills@claude-code-kit
+  ```
+- **Mods de ahorro de tokens** (Ben AI): ver [`08-mods-ahorro-tokens.md`](08-mods-ahorro-tokens.md).
+
 ## Cuidado con la cuota
 
 Cada plugin suma skills y agentes al listado inicial. En un plan gratis o de prueba, empieza con `superpowers` + `ponytail` + `frontend-design` y suma el resto cuando lo necesites. Los de revisión en paralelo (`egm`, revisiones "ultra") lanzan muchos subagentes: gastan mucho.

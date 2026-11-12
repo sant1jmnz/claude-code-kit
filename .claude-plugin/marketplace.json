@@ -1,0 +1,11 @@
+{
+  "name": "claude-code-kit",
+  "owner": { "name": "claude-code-kit" },
+  "plugins": [
+    {
+      "name": "guia-skills",
+      "source": "./plugins/guia-skills",
+      "description": "/guia: qué skill usar para cada tarea; sugiere la skill adecuada mientras escribes (ES/EN)."
+    }
+  ]
+}
