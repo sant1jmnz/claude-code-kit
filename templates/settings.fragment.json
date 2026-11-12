@@ -1,0 +1,25 @@
+{
+  "_nota": "Fragmento para FUSIONAR en ~/.claude/settings.json (no reemplazar). Borra las claves que empiezan con _ al fusionar. Explica cada clave a la persona antes de aplicarla.",
+  "_effortLevel": "Esfuerzo de razonamiento medio por defecto: ahorra cuota. Sube solo en tareas difíciles.",
+  "effortLevel": "medium",
+  "_plugins": "Set base. Instalar primero con /plugin (ver docs/03-plugins.md); esto solo los deja activados.",
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true,
+    "claude-security@claude-plugins-official": true,
+    "frontend-design@claude-code-plugins": true,
+    "ui-ux-pro-max@ui-ux-pro-max-skill": true,
+    "ponytail@ponytail": true
+  },
+  "_marketplaces": "De dónde salen los plugins.",
+  "extraKnownMarketplaces": {
+    "claude-code-plugins": { "source": { "source": "github", "repo": "anthropics/claude-code" } },
+    "ui-ux-pro-max-skill": { "source": { "source": "github", "repo": "nextlevelbuilder/ui-ux-pro-max-skill" } },
+    "ponytail": { "source": { "source": "github", "repo": "DietrichGebert/ponytail" } }
+  },
+  "_rtkHook": "SOLO si instalaste RTK (docs/05-ahorrar-tokens.md). `rtk init -g` normalmente lo agrega solo; si ya existe, no duplicar.",
+  "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [ { "type": "command", "command": "rtk hook claude" } ] }
+    ]
+  }
+}
