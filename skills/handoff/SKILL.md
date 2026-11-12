@@ -1,21 +1,21 @@
 ---
 name: handoff
-description: Resume la conversación actual en un archivo para que otra sesión (o agente) continúe el trabajo con poco contexto. Usar cuando la charla se alargó, se cerró un tema, o la persona dice "handoff", "pasemos a una sesión nueva" o "guardá el estado para seguir después".
-argument-hint: "Para qué se usará la sesión siguiente"
+description: Summarize the current conversation into a file so another session (or agent) can continue the work with little context. Use when the chat got long, a topic closed, or the person says "handoff", "let's move to a new session" or "save the state so I can continue later".
+argument-hint: "What the next session will be used for"
 disable-model-invocation: true
 ---
 
-Escribe un documento de traspaso para que un agente nuevo continúe sin releer la conversación.
+Write a handoff document so a fresh agent can continue without rereading the conversation.
 
-1. **Dónde guardarlo:** `seguimiento/handoffs/AAAA-MM-DD_<tema>.md` dentro de la carpeta de seguimiento del usuario (si no existe, pregunta la ruta una vez y créala). Si no hay carpeta de seguimiento, usa `./handoffs/` en el proyecto actual.
-2. **Contenido (corto, sin relleno):**
-   - Objetivo y estado actual en 3–5 líneas.
-   - Decisiones tomadas y por qué.
-   - Qué falta hacer, en orden.
-   - Archivos y rutas clave (referenciarlos, no copiar su contenido).
-   - Skills que el agente siguiente debería usar y el área/proyecto a leer del seguimiento.
-   - Riesgos o cosas que no se pudieron verificar.
-3. **No dupliques** lo que ya vive en otros archivos (seguimiento, planes, commits, diffs): enlázalo por ruta.
-4. **Redacta datos sensibles:** nada de claves, contraseñas ni datos personales.
-5. Si el usuario pasó argumentos, adapta el documento a lo que hará la sesión siguiente.
-6. Al terminar, dile la línea exacta para pegar en la sesión nueva: `Leé <ruta> y seguí`.
+1. **Where to save it:** `tracking/handoffs/YYYY-MM-DD_<topic>.md` inside the user's tracking folder (if it doesn't exist, ask for the path once and create it). If there's no tracking folder, use `./handoffs/` in the current project.
+2. **Content (short, no filler):**
+   - Goal and current state in 3–5 lines.
+   - Decisions made and why.
+   - What's left to do, in order.
+   - Key files and paths (reference them, don't copy their content).
+   - Skills the next agent should use and the area/project to read from tracking.
+   - Risks or things that couldn't be verified.
+3. **Don't duplicate** what already lives in other files (tracking, plans, commits, diffs): link it by path.
+4. **Redact sensitive data:** no keys, passwords or personal data.
+5. If the user passed arguments, tailor the document to what the next session will do.
+6. When done, give them the exact line to paste in the new session: `Read <path> and continue`.

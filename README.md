@@ -1,42 +1,56 @@
 # claude-code-kit
 
-Un setup completo para sacarle el máximo a **Claude Code** (y portarlo a **Codex** o **Antigravity** en plan gratis): skills, plugins, MCPs, ahorro de tokens, memoria entre sesiones y una forma de trabajar probada.
+A complete, battle-tested setup for **Claude Code**: curated skills, plugins, MCP servers, token-saving habits, a file-based memory system and a proven way of working. Most of it ports to **Codex**, **Google Antigravity**, **Gemini CLI**, **Cursor**, **Windsurf**, **Cline** and other agents, so it also works on free plans.
 
-*English TL;DR: a ready-to-apply setup for Claude Code (portable to Codex / Google Antigravity): curated skills, plugins, MCP servers, token-saving habits, a file-based memory system, and a global instructions template. You give `INSTALAR.md` to your AI agent and it installs everything, asking before touching anything.*
+You don't install anything by hand: you give [`INSTALL.md`](INSTALL.md) to your AI agent and it does the work, asking before it touches anything.
 
-## Cómo usarlo (30 segundos)
+## Quick start (30 seconds)
 
-1. Cloná el repo o descargalo como ZIP.
-2. Abrí tu agente (Claude Code, Codex o Antigravity) **dentro de la carpeta** del repo.
-3. Pegale esto:
+1. Clone this repo or download it as a ZIP.
+2. Open your agent (Claude Code, Codex, Antigravity, ...) **inside the repo folder**.
+3. Paste this:
 
-   > Leé `INSTALAR.md` y aplicalo en mi computadora. Preguntame antes de modificar cualquier archivo global.
+   > Read `INSTALL.md` and apply it on my computer. Ask me before changing any global file.
 
-4. Reiniciá el agente al final (las skills y plugins se cargan al arrancar).
+4. Restart the agent when it finishes (skills and plugins load at startup).
 
-Nada se instala a escondidas: el agente hace backup de tu configuración, te muestra qué va a cambiar y espera tu OK.
+The agent backs up your config, shows what it will change and waits for your OK. Nothing is installed behind your back.
 
-## Qué trae
+## What you get
 
-| Carpeta / archivo | Para qué |
+- **A way of working** that gets much more out of the model: skill-first, plan → build → verify, short answers, no invented data, no generic "AI look".
+- **Skills** for coding, design, marketing, video, documents, research, security and more, installed from their original authors.
+- **Plugins and MCPs**: a full dev workflow (`superpowers`), design systems, docs lookup (Context7), browser testing (Playwright, Chrome DevTools).
+- **Token savers**: RTK, subagent rules, effort/model routing, handoffs, and community mods that cut usage automatically. Essential on trial and free plans.
+- **A memory system** in plain Markdown so the agent doesn't forget you between sessions.
+- **Portable instructions** (`AGENTS.md`-style) for other agents.
+
+## What's inside
+
+| Path | What it is |
 |---|---|
-| [`INSTALAR.md`](INSTALAR.md) | Instrucciones paso a paso **para el agente de IA** |
-| [`docs/01-como-trabajo.md`](docs/01-como-trabajo.md) | La forma de trabajar: el flujo y los hábitos que hacen la diferencia |
-| [`docs/02-skills.md`](docs/02-skills.md) | Skills recomendadas, de dónde salen y cómo instalarlas |
-| [`docs/03-plugins.md`](docs/03-plugins.md) | Plugins de Claude Code (superpowers, diseño, seguridad, etc.) |
-| [`docs/04-mcp.md`](docs/04-mcp.md) | MCPs útiles: docs al día, navegador, scraping |
-| [`docs/05-ahorrar-tokens.md`](docs/05-ahorrar-tokens.md) | Cómo gastar menos cuota (clave en planes gratis o de prueba) |
-| [`docs/08-mods-ahorro-tokens.md`](docs/08-mods-ahorro-tokens.md) | Mods que recortan tokens solos (input-router, model-router, savings-proof…) |
-| [`plugins/guia-skills`](plugins/guia-skills) | Mod propio: `/guia` y sugerencias de skill mientras escribes |
-| [`docs/06-memoria.md`](docs/06-memoria.md) | Sistema de memoria en archivos para no perder el hilo entre sesiones |
-| [`docs/07-codex-antigravity.md`](docs/07-codex-antigravity.md) | Qué se porta a Codex / Antigravity y cómo |
-| [`templates/`](templates) | `CLAUDE.md` global, fragmento de `settings.json` y plantillas de memoria |
-| [`skills/`](skills) | Dos skills propias: `handoff` y `perfiles` |
+| [`INSTALL.md`](INSTALL.md) | Step-by-step instructions **for the AI agent** |
+| [`AGENTS.md`](AGENTS.md) | Tells any agent opened in this repo what to do |
+| [`docs/01-workflow.md`](docs/01-workflow.md) | The workflow and habits that make the difference |
+| [`docs/02-skills.md`](docs/02-skills.md) | Recommended skills, where they come from, how to install them |
+| [`docs/03-plugins.md`](docs/03-plugins.md) | Claude Code plugins (superpowers, design, security, ...) |
+| [`docs/04-mcp.md`](docs/04-mcp.md) | MCP servers: live docs, browser, scraping |
+| [`docs/05-save-tokens.md`](docs/05-save-tokens.md) | How to spend less quota |
+| [`docs/06-memory.md`](docs/06-memory.md) | File-based memory across sessions |
+| [`docs/07-other-agents.md`](docs/07-other-agents.md) | Porting to Codex, Antigravity, Gemini CLI, Cursor and more |
+| [`docs/08-token-saving-mods.md`](docs/08-token-saving-mods.md) | Mods that cut tokens automatically |
+| [`plugins/skill-guide`](plugins/skill-guide) | Own mod: `/guide` skill cheat-sheet + skill suggestions as you type (EN/ES) |
+| [`templates/`](templates) | Global instructions, `settings.json` fragment, memory templates |
+| [`skills/`](skills) | Skills bundled here: `handoff`, `skill-profiles`, `youtube-scriptwriting` |
 
-## Qué NO trae
+## What it does NOT include
 
-No copia skills ni plugins de terceros: los instala desde su repositorio original (cada uno con su licencia y autor). Tampoco incluye claves ni datos personales. Las herramientas pagas o con API key (por ejemplo Firecrawl) son opcionales y la clave la pones vos.
+Third-party skills and plugins are **not copied**: they are installed from their original repos (each with its own author and license). No keys or personal data are included. Paid or key-based tools (e.g. Firecrawl) are optional and you add the key yourself.
 
-## Aviso
+## Requirements
 
-Es una configuración de uso personal compartida tal cual. Revisá lo que instala (cada skill es texto que le dice a tu IA qué hacer) antes de aceptar. Licencia MIT para lo escrito acá.
+Node.js 18+, git, and one agent. Works on Windows, macOS and Linux.
+
+## Disclaimer
+
+Shared as-is. Every skill is text that tells your AI what to do: read what it installs before accepting. MIT license for what's written here.

@@ -3,9 +3,9 @@
   "owner": { "name": "claude-code-kit" },
   "plugins": [
     {
-      "name": "guia-skills",
-      "source": "./plugins/guia-skills",
-      "description": "/guia: qué skill usar para cada tarea; sugiere la skill adecuada mientras escribes (ES/EN)."
+      "name": "skill-guide",
+      "source": "./plugins/skill-guide",
+      "description": "/guide: which skill to use for each task; suggests the right skill as you type (English and Spanish)."
     }
   ]
 }

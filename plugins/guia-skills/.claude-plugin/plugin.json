@@ -1,6 +1,0 @@
-{
-  "name": "guia-skills",
-  "version": "0.2.0",
-  "description": "/guia: panel con qué skill usar para cada tarea y cómo pedirla. Sugiere la skill adecuada mientras escribes (ES/EN), solo si la tienes instalada.",
-  "license": "MIT"
-}

@@ -1,0 +1,6 @@
+{
+  "name": "skill-guide",
+  "version": "0.3.0",
+  "description": "/guide: a panel of which skill to use for each task and how to ask for it. Suggests the right skill as you type (English and Spanish), only if you have it installed.",
+  "license": "MIT"
+}

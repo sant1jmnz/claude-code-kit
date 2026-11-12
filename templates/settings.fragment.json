@@ -1,8 +1,8 @@
 {
-  "_nota": "Fragmento para FUSIONAR en ~/.claude/settings.json (no reemplazar). Borra las claves que empiezan con _ al fusionar. Explica cada clave a la persona antes de aplicarla.",
-  "_effortLevel": "Esfuerzo de razonamiento medio por defecto: ahorra cuota. Sube solo en tareas difíciles.",
+  "_note": "Fragment to MERGE into ~/.claude/settings.json (do not replace it). Delete the keys that start with _ when merging. Explain each key to the person before applying it.",
+  "_effortLevel": "Medium reasoning effort by default: saves quota. Raise it only for hard tasks.",
   "effortLevel": "medium",
-  "_plugins": "Set base. Instalar primero con /plugin (ver docs/03-plugins.md); esto solo los deja activados.",
+  "_plugins": "Base set. Install first with /plugin (see docs/03-plugins.md); this only leaves them enabled.",
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true,
     "claude-security@claude-plugins-official": true,
@@ -10,13 +10,13 @@
     "ui-ux-pro-max@ui-ux-pro-max-skill": true,
     "ponytail@ponytail": true
   },
-  "_marketplaces": "De dónde salen los plugins.",
+  "_marketplaces": "Where the plugins come from.",
   "extraKnownMarketplaces": {
     "claude-code-plugins": { "source": { "source": "github", "repo": "anthropics/claude-code" } },
     "ui-ux-pro-max-skill": { "source": { "source": "github", "repo": "nextlevelbuilder/ui-ux-pro-max-skill" } },
     "ponytail": { "source": { "source": "github", "repo": "DietrichGebert/ponytail" } }
   },
-  "_rtkHook": "SOLO si instalaste RTK (docs/05-ahorrar-tokens.md). `rtk init -g` normalmente lo agrega solo; si ya existe, no duplicar.",
+  "_rtkHook": "ONLY if you installed RTK (docs/05-save-tokens.md). `rtk init -g` normally adds it by itself; if it already exists, don't duplicate it.",
   "hooks": {
     "PreToolUse": [
       { "matcher": "Bash", "hooks": [ { "type": "command", "command": "rtk hook claude" } ] }

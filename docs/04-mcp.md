@@ -1,14 +1,14 @@
-# 04 — MCPs
+# 04 — MCP servers
 
-Un MCP le da herramientas al agente (leer docs, controlar un navegador, scrapear). Cada MCP activo carga sus herramientas en el contexto: **instala pocos**.
+An MCP server gives the agent tools (read docs, drive a browser, scrape). Every active MCP loads its tools into the context: **install few**.
 
-## Set base (sin clave)
+## Base set (no key)
 
-| MCP | Para qué |
+| MCP | What for |
 |---|---|
-| `context7` | Documentación **actual** de cualquier librería o framework, en vez de confiar en la memoria del modelo |
-| `playwright` | Navegador automatizado: probar tu web, capturas, formularios, responsive |
-| `chrome-devtools` | Consola, red, rendimiento y auditorías Lighthouse de una página |
+| `context7` | **Current** documentation for any library or framework, instead of trusting the model's memory |
+| `playwright` | Automated browser: test your site, screenshots, forms, responsive checks |
+| `chrome-devtools` | Console, network, performance and Lighthouse audits of a page |
 
 ### Claude Code
 
@@ -31,22 +31,22 @@ command = "npx"
 args = ["-y", "@playwright/mcp@latest"]
 ```
 
-### Antigravity
+### Antigravity, Gemini CLI, Cursor, Windsurf, Cline
 
-Panel de MCP del agente → "Manage MCP servers" → agregar con el mismo `command` / `args`.
+Add them through the agent's MCP panel or its MCP config file using the same `command` / `args` (`npx -y <package>`).
 
-## Opcional: Firecrawl (búsqueda web y scraping)
+## Optional: Firecrawl (web search and scraping)
 
-Sirve para buscar en la web y leer páginas completas (útil para investigar). Tiene capa gratis; para más uso pide una API key en firecrawl.dev. **La clave la pones tú, en tu terminal; no se la pegues al agente:**
+Useful for searching the web and reading full pages (great for research). It has a free tier; for more usage get an API key at firecrawl.dev. **You enter the key in your own terminal; don't paste it to the agent:**
 
 ```bash
-claude mcp add --transport http firecrawl https://mcp.firecrawl.dev/v2/mcp --header "Authorization: Bearer TU_CLAVE"
+claude mcp add --transport http firecrawl https://mcp.firecrawl.dev/v2/mcp --header "Authorization: Bearer YOUR_KEY"
 ```
 
-## Revisar un MCP antes de instalarlo
+## Review an MCP before installing it
 
-Antes de aceptar uno nuevo: ¿de quién es el paquete? ¿qué comando ejecuta? ¿pide acceso a archivos, cuentas o red? Léelo como texto, no lo ejecutes "para ver". La skill `mcp-dependency-review` hace esta revisión estática. Fija versiones (`paquete@1.2.3`) cuando puedas, así una actualización maliciosa no te entra sola.
+Before accepting a new one: who publishes the package? What command does it run? Does it ask for access to files, accounts or the network? Read it as text, don't run it "just to see". The `mcp-dependency-review` skill does this static review. Pin versions (`package@1.2.3`) when you can, so a malicious update can't slip in by itself.
 
-## Conectores (Gmail, Drive, etc.)
+## Connectors (Gmail, Drive, etc.)
 
-Mantenlos **apagados por defecto** y préndelos solo cuando una tarea los necesite: cada uno agrega muchas herramientas al contexto.
+Keep them **off by default** and turn them on only when a task needs them: each one adds many tools to the context.
