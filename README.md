@@ -18,6 +18,8 @@ The agent backs up your config, shows what it will change and waits for your OK.
 
 ## What you get
 
+- **Rule #1: no AI slop.** The agent must not produce generic, padded or invented output, and must tell you when something might look like it.
+- **A weekly update check**: a scheduled task makes your agent look for updates of everything installed and report, never changing anything without your OK.
 - **A way of working** that gets much more out of the model: skill-first, plan → build → verify, short answers, no invented data, no generic "AI look".
 - **Skills** for coding, design, marketing, video, documents, research, security and more, installed from their original authors.
 - **Plugins and MCPs**: a full dev workflow (`superpowers`), design systems, docs lookup (Context7), browser testing (Playwright, Chrome DevTools).
@@ -40,8 +42,9 @@ The agent backs up your config, shows what it will change and waits for your OK.
 | [`docs/07-other-agents.md`](docs/07-other-agents.md) | Porting to Codex, Antigravity, Gemini CLI, Cursor and more |
 | [`docs/08-token-saving-mods.md`](docs/08-token-saving-mods.md) | Mods that cut tokens automatically |
 | [`plugins/skill-guide`](plugins/skill-guide) | Own mod: `/guide` skill cheat-sheet + skill suggestions as you type (EN/ES) |
+| [`docs/09-weekly-updates.md`](docs/09-weekly-updates.md) | Rule #1 (no AI slop) and the weekly "check for updates" task |
 | [`templates/`](templates) | Global instructions, `settings.json` fragment, memory templates |
-| [`skills/`](skills) | Skills bundled here: `handoff`, `skill-profiles`, `youtube-scriptwriting` |
+| [`skills/`](skills) | Skills bundled here: `anti-slop`, `weekly-update`, `handoff`, `skill-profiles`, `youtube-scriptwriting` |
 
 ## What it does NOT include
 

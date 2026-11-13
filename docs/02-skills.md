@@ -81,6 +81,8 @@ Copy the folders in [`../skills/`](../skills) to your agent's global skills fold
 
 | Skill | What it does |
 |---|---|
+| `anti-slop` | **Rule #1.** Checklist to catch generic/AI-looking output in text, UI, code, media and data, and to tell you when something might be slop |
+| `weekly-update` | Read-only check for updates of the agent, skills, plugins, MCP servers and RTK; reports and asks before applying (includes `check-updates.py`) |
 | `handoff` | Summarizes the conversation into a file so you can continue in a new session (saves tokens) |
 | `skill-profiles` | Turns groups of skills on/off depending on the day's work, so you don't exceed the context budget (Claude Code) |
 | `youtube-scriptwriting` | Retention-focused YouTube scripts (hook, structure, outro). Included as-is; I couldn't trace its original author, if it's yours or you know whose it is, open an issue |

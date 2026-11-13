@@ -16,6 +16,10 @@ It's not just what you install, it's how you use it. These habits pay off the mo
 - Short. No filler, no repeating what was said. Technical things in plain words.
 - If something can't be done: the reason in two lines and an alternative.
 
+## Rule #1: no AI slop
+
+Forbidden, no exceptions. The agent must not produce generic, padded, templated or unverifiable output, and must **tell you when something might be or look like slop** instead of shipping it silently. Details and checklist: `skills/anti-slop` and [`09-weekly-updates.md`](09-weekly-updates.md).
+
 ## Quality
 
 - **Interfaces:** never accept the "generic AI look". Use the design skills (`design-taste-frontend`, `frontend-design`, `ui-ux-pro-max`, `apple-design`) from the start, not as a patch. Test in a real browser (Playwright / preview), mobile and desktop. Measure overflow per element: a page's total width doesn't detect clipped or off-center things; look at screenshots.

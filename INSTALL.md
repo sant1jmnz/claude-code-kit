@@ -56,7 +56,7 @@ npx skills add <owner/repo> -g -a <agent> -y -s <skill1> <skill2>
 
 (`<agent>`: `claude-code`, `codex`, `antigravity`, ... if an id fails, run `npx skills add --help`. `-l` lists what a repo offers without installing.)
 
-Then copy this repo's bundled skills from `skills/` (`handoff`, `skill-profiles`, `youtube-scriptwriting`) into the agent's global skills folder. Ask whether they also want the optional packs (marketing, video, Instagram, security).
+Then copy this repo's bundled skills from `skills/` (`anti-slop`, `weekly-update`, `handoff`, `skill-profiles`, `youtube-scriptwriting`) into the agent's global skills folder. Ask whether they also want the optional packs (marketing, video, Instagram, security).
 
 ## Phase 4 — Plugins and mods (Claude Code only)
 
@@ -75,6 +75,12 @@ RTK filters terminal command output and saves a large share of read tokens. Read
 ## Phase 7 — File-based memory
 
 Read `docs/06-memory.md`. Ask the person **where** they want the tracking folder (suggested: `~/tracking/`) and create the structure from `templates/memory/`. Run a 5-question mini-interview to fill `ABOUT_ME.md` (how they like to be spoken to, their areas — work/study/personal or others —, active projects, what you must never do, technical level). Save **only what they answer**.
+
+## Phase 7b — Anti-slop rule and weekly update task
+
+1. Confirm `templates/global-instructions.md` was merged with the **RULE #1 — No AI slop** section at the top (Phase 1) and copy the `anti-slop` and `weekly-update` skills from `skills/` (Phase 3). The rule is non-negotiable: do not drop it even if the user asks for shorter instructions.
+2. Read `docs/09-weekly-updates.md`. Ask the person if they want the **weekly update check** and on which day/time (default Sunday 10:00). If yes, create the scheduled task with the exact prompt in that doc, using whatever your agent offers (scheduled-tasks tool, cron, Task Scheduler). The task must be report-only: it never installs anything without the person's OK.
+3. Run `python -I <skills-folder>/weekly-update/check-updates.py` once so the person sees the first report.
 
 ## Phase 8 — Verify
 
