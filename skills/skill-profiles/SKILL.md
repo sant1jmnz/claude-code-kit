@@ -1,6 +1,11 @@
 ---
 name: skill-profiles
-description: Turn groups of skills on or off depending on the type of work (frontend, marketing, video, code, ...) so the skill listing stays within the context budget. Use when the person says what kind of work they'll do ("today is frontend", "let's do video"), asks to see/change/create profiles, or asks why a skill doesn't show up or why the skills listing is truncated. Claude Code only. 
+description: Turn groups of skills on or off depending on the type of work (frontend, marketing, video, code, ...) so the skill listing stays within the context budget. Use when the person says what kind of work they'll do ("today is frontend", "let's do video"), asks to see/change/create profiles, or asks why a skill doesn't show up or why the skills listing is truncated. Claude Code only.
+author: sant1jmnz
+tags:
+  - productivity
+  - claude-code
+  - configuration
 ---
 
 # Skill profiles

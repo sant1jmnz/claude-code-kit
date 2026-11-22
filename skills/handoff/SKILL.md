@@ -3,6 +3,11 @@ name: handoff
 description: Summarize the current conversation into a file so another session (or agent) can continue the work with little context. Use when the chat got long, a topic closed, or the person says "handoff", "let's move to a new session" or "save the state so I can continue later".
 argument-hint: "What the next session will be used for"
 disable-model-invocation: true
+author: sant1jmnz
+tags:
+  - productivity
+  - context
+  - sessions
 ---
 
 Write a handoff document so a fresh agent can continue without rereading the conversation.
