@@ -56,7 +56,7 @@ npx skills add <owner/repo> -g -a <agent> -y -s <skill1> <skill2>
 
 (`<agent>`: `claude-code`, `codex`, `antigravity`, ... if an id fails, run `npx skills add --help`. `-l` lists what a repo offers without installing.)
 
-Then copy this repo's bundled skills from `skills/` (`anti-slop`, `weekly-update`, `handoff`, `skill-profiles`, `youtube-scriptwriting`) into the agent's global skills folder. Ask whether they also want the optional packs (marketing, video, Instagram, security).
+Then copy this repo's bundled skills from `skills/` written for the kit (`anti-slop`, `weekly-update`, `handoff`, `skill-profiles`, `delegate`, `render-qa`, `prelaunch-audit`, `youtube-scriptwriting`). The other folders in `skills/` are third-party (see `CREDITS.md`): copy only the ones the person asks for into the agent's global skills folder. Ask whether they also want the optional packs (marketing, video, Instagram, security).
 
 ## Phase 4 — Plugins and mods (Claude Code only)
 

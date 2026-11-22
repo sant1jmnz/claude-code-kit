@@ -77,7 +77,7 @@ npx skills add coleam00/excalidraw-diagram-skill -g -a claude-code -y -s excalid
 
 ## Skills bundled in this kit
 
-Copy the folders in [`../skills/`](../skills) to your agent's global skills folder:
+Written for this kit (copy the ones you want to your agent's global skills folder):
 
 | Skill | What it does |
 |---|---|
@@ -85,7 +85,12 @@ Copy the folders in [`../skills/`](../skills) to your agent's global skills fold
 | `weekly-update` | Read-only check for updates of the agent, skills, plugins, MCP servers and RTK; reports and asks before applying (includes `check-updates.py`) |
 | `handoff` | Summarizes the conversation into a file so you can continue in a new session (saves tokens) |
 | `skill-profiles` | Turns groups of skills on/off depending on the day's work, so you don't exceed the context budget (Claude Code) |
+| `delegate` | Hands bulk or well-scoped work to free external agents (Codex, Antigravity, DeepSeek via OpenCode), blocks secrets, and reviews what comes back (includes `delegate.py`) |
+| `render-qa` | Checks every rendered video/image for wrong duration, borders, cut-off text and wrong numbers with a contact sheet |
+| `prelaunch-audit` | Pre-launch website audit: bugs, security routes, legal pages, SEO, accessibility, load test, 20 signs of a vibe-coded site |
 | `youtube-scriptwriting` | Retention-focused YouTube scripts (hook, structure, outro). Included as-is; I couldn't trace its original author, if it's yours or you know whose it is, open an issue |
+
+The other folders in [`../skills/`](../skills) are third-party skills bundled with credit and license: see [`../CREDITS.md`](../CREDITS.md). You don't need to copy all of them; the base set above is enough to start.
 
 Global skills paths: Claude Code `~/.claude/skills/` · Antigravity `~/.gemini/config/skills/` · Codex and others: let `npx skills add -a <agent>` resolve the path.
 

@@ -1,6 +1,6 @@
 ---
 name: weekly-update
-description: Weekly check for updates of everything installed in the AI-agent setup (agent CLI, skills, plugins, MCP servers, RTK) and a short report. Read-only by default; applies nothing without the user's OK. Use when the scheduled weekly task fires, or when the user asks "check for updates", "is anything outdated", "update my skills/plugins".
+description: See what is outdated in your setup every week, and update only what you approve - weekly check for updates of everything installed in the AI-agent setup (agent CLI, skills, plugins, MCP servers, RTK) and a short report. Read-only by default; applies nothing without the user's OK. Use when the scheduled weekly task fires, or when the user asks "check for updates", "is anything outdated", "update my skills/plugins".
 author: sant1jmnz
 tags:
   - maintenance

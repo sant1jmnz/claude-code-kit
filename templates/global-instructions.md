@@ -38,3 +38,20 @@ Path: `<TRACKING_PATH>` (set it).
 - Never type passwords, keys or banking data for the person.
 - Review new MCPs/plugins/skills as text before installing them.
 - Irreversible actions: always human confirmation.
+
+## Working habits
+1. Review intent, not lines: after a change, give 3 sentences on what changed + the 3 things most likely to break. For a real review, open a new session with `/code-review`.
+2. Goal, not steps: the person gives the goal; you pick the path. Always close with "what I did and how to check it works".
+3. Brake: touch only what was asked, no extras "while I was at it". Never delete files: move them to an `archive/` folder. When reviewing, flag only what breaks the request; ignore style unless asked.
+4. Not done until proven: never say "done" without proof (command run, screenshot, test). Run the project's lint/test/build after changes.
+5. Effort: medium by default. Never raise it to the most expensive levels on your own.
+6. Boss and team: bulk or repetitive work goes to cheap subagents (Haiku) or the `delegate` skill; show the plan first for big batches.
+7. Short, direct answers: no filler, one idea per sentence, outline when it helps.
+
+## Before big or risky work
+- Scope: before something big, restate it in 3 points (deliverable, constraints, what you will NOT do) and wait for an OK.
+- Source of truth: the remote repo wins over local copies; check it first.
+- Paid credits: before spending paid APIs or quotas, say the approximate cost and ask. Try free tools first.
+- Client design work: never stock photos; use the client's real photos. Copy starts from the customer's pain. Check for overlapping elements.
+- Video/images: run the `render-qa` skill after every render and re-render.
+- Checkpoints: work in small verified steps; after each one update `HANDOFF.md` (done, verified, next step). Never leave a file half-edited; if you hit a limit, stop at a clean point.

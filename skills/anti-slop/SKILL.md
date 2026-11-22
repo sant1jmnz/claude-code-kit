@@ -1,6 +1,6 @@
 ---
 name: anti-slop
-description: The most important rule - AI slop is forbidden. Before delivering anything (text, design, code, copy, video scripts, data), check it for anything that is or could look like generic AI output, and tell the user explicitly what you found. Use on every deliverable, and whenever the user asks to review something for "AI look", "slop", "sounds like ChatGPT", "generic" or "template-y".
+description: Stops your agent from sounding like ChatGPT - no generic, padded, templated or invented output, and it tells you when something might read as AI-made. Before delivering anything (text, design, code, copy, video scripts, data), check it for anything that is or could look like generic AI output, and tell the user explicitly what you found. Use on every deliverable, and whenever the user asks to review something for "AI look", "slop", "sounds like ChatGPT", "generic" or "template-y".
 author: sant1jmnz
 tags:
   - writing
