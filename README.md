@@ -18,6 +18,12 @@ You don't install anything by hand: you hand [`INSTALL.md`](INSTALL.md) to your 
 | [`render-qa`](skills/render-qa) | Sending a broken render. Checks duration, borders, cut-off text and numbers on a contact sheet |
 | [`anti-slop`](skills/anti-slop) | Generic AI-sounding output. Checks every deliverable for generic, padded or invented content and tells you what it found |
 
+Install just these 7 in one line (Claude Code, Codex, Antigravity and other agents):
+
+```bash
+npx skills add sant1jmnz/claude-code-kit -g -s anti-slop delegate skill-profiles handoff weekly-update prelaunch-audit render-qa
+```
+
 Plus **131 skills by 13 other authors** (design, marketing, video with HyperFrames, Three.js, Instagram, research, security...), bundled unchanged with their author, source and license: see [`CREDITS.md`](CREDITS.md).
 
 ## Quick start
